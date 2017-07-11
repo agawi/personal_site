@@ -1,4 +1,9 @@
-'use strict'
+'use strict';
+
+/**
+ * The clock object handles the clock displayed
+ * on the first page
+ */
 const Clock = {
 
   /**
@@ -33,14 +38,14 @@ const Clock = {
 
       // push new Tick 
       this.ticks.push(Object.create(Tick).init(app));
-      this.ticks[i].setDimensions({width: 20, height: 40});
-      this.ticks[i].rotate(currentTickAngle + Math.PI / 2);
-      this.ticks[i].setPosition({
+      this.ticks[i].shape.setDimensions({width: 20, height: 40});
+      this.ticks[i].shape.rotate(currentTickAngle + Math.PI / 2);
+      this.ticks[i].shape.setPosition({
         x: (Math.cos(currentTickAngle) * this.radius) + this.center.x,
         y: (Math.sin(currentTickAngle) * this.radius) + this.center.y,
       });
       // scale the tick by the tickScale
-      this.ticks[i].scale(tickScale);
+      this.ticks[i].shape.scale(tickScale);
       // Important /!\ for animations to work
       // gives the animations object the dimensions of their 
       // respective sprites

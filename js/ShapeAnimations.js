@@ -1,6 +1,4 @@
-'use strict'
-
-
+'use strict';
 
 /**
  * This class confers animation functionalities to shape objects 
@@ -23,10 +21,10 @@ function ShapeAnimations (shape) {
  */
 ShapeAnimations.prototype.resetShapeDimensions = function () {
   this.originalDimensions = {
-    x: this.getShape().sprite.x,
-    y: this.getShape().sprite.y,
-    width: this.getShape().sprite.width,
-    height: this.getShape().sprite.height
+    x: this.getShape().getSprite().x,
+    y: this.getShape().getSprite().y,
+    width: this.getShape().getSprite().width,
+    height: this.getShape().getSprite().height
   };
 }
 
@@ -117,7 +115,7 @@ ShapeAnimations.prototype.fadein = function (time, delay) {
     });
 
     // Modifies the alpha of the sprite directly
-    this.getShape().sprite.alpha = currentAlpha;
+    this.getShape().getSprite().alpha = currentAlpha;
     currentAlpha += FINAL_ALPHA / (SECONDS * fps);
     currentX += interval;
   };
@@ -127,7 +125,7 @@ ShapeAnimations.prototype.fadein = function (time, delay) {
   // is supposed to despite any bug or performance glitch
   const restore = function () {
     this.restoreDimensions();
-    this.getShape().sprite.alpha = FINAL_ALPHA;
+    this.getShape().getSprite().alpha = FINAL_ALPHA;
   };
 
   // TODO export this behavior out to the loop function
