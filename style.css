@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+
+  /*font-family: 'Playball', cursive;*/
+}
+
+.center {
+  margin: auto;
+}
+
+.clock-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 1;
+  z-index: 0;
+}
+main {
+  width: 100%;
+  height: 100%;
+  /*background-color:#fcfdff;*/
+  background-color:#fff;
+  z-index: -2;
+}
+#name {
+  text-align: center;
+  position:relative;
+  top: 250px;
+  font-size: 48px;
+  
+  font-family: 'Comfortaa', cursive;
+  /*font-family: 'Forum', cursive;*/
+  /*font-family: 'Nixie One', cursive;*/
+  color: #424242;
+;
+}
