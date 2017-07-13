@@ -1,8 +1,12 @@
 'use strict';
 
+// TODO find out why pixi is not imported correctly
+// import PIXI from 'pixi.js';
+import Clock from './Clock.js';
+import Tick from './Tick.js';
 // Main function
 window.onload = function main() {
-
+  console.log(PIXI);
   // Create PIXI application, add css classes, and append canvas to document.
   const app = new PIXI.Application(window.innerWidth, window.innerHeight, {transparent: true, antialias: true});
   app.view.classList.add('center')
@@ -21,7 +25,7 @@ window.onload = function main() {
   });
   
   // set the globale texture of the ticks
-  Tick.setGlobalTexture('clock-tick.png');
+  Tick.setGlobalTexture('img/clock-tick.png');
   // create the clock ticks
   Clock.createTicks(app, Tick);
 

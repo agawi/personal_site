@@ -1,5 +1,5 @@
 'use strict';
-
+import UTILS from './UTILS.js';
 /**
  * This class confers animation functionalities to shape objects 
  * like fadin and pop animations
@@ -170,3 +170,5 @@ ShapeAnimations.prototype.loop = function (callback, time, close, delay) {
   }
   loopId = requestAnimationFrame(internalLoop.bind(this))
 }
+
+export default ShapeAnimations;

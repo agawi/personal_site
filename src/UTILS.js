@@ -1,4 +1,4 @@
-UTILS = {
+const UTILS = {
 
   /**
    * Sets up variables to calculate the Frames per Second
@@ -17,9 +17,11 @@ UTILS = {
       now = Date.now();
       timeSinceLastFrame = now - previousTime;
       
-      _fps = 1000 / timeSinceLastFrame;
+      _fps = 1000 / timeSinceLastFrame; 
       previousTime = now;
       return _fps;
     }
   }
 }
+
+export default UTILS;

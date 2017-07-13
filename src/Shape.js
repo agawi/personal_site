@@ -48,3 +48,5 @@ Shape.prototype.setDimensions  = function (dim) {
 Shape.prototype.setPosition = function (pos) {
   this.getSprite().x = pos.x; this.getSprite().y = pos.y;
 };
+
+export default Shape;

@@ -1,5 +1,7 @@
 'use strict';
-
+//import PIXI from 'pixi.js';
+import Shape from './Shape.js';
+import ShapeAnimations from './ShapeAnimations.js';
 // TODO transfer a lot of functionality of Tick to Shape 
 // For better composition and reusability
 const Tick = {
@@ -49,3 +51,5 @@ const Tick = {
     app.stage.addChild(this.sprite);
   }
 }
+
+export default Tick;
